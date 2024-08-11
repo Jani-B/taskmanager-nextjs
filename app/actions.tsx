@@ -23,7 +23,6 @@ export async function createToDo(prevState: any, formData: FormData) {
     if (data.length < 10) {
       let getlastelement = data[data.length - 1];
       let newId = getlastelement.id + 1;
-      let newStringId = newId.toString();
       console.log(newId);
 
       data.push({

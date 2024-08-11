@@ -13,7 +13,11 @@ export default async function ToDoList() {
     datainfo.push(data[i]);
   }
 
-  
+  let tooMany = false;
+
+  if (datainfo.length === 10) {
+    tooMany = true;
+  }
 
   return (
     <div>
@@ -23,8 +27,6 @@ export default async function ToDoList() {
             {item.title} <Delete id={item.id.toString()} />
           </li>
         ))}
-
-        <li>test</li>
       </ul>
     </div>
   );

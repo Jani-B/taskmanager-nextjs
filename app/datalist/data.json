@@ -1,18 +1,1 @@
-[
-  {
-    "id": 1,
-    "title": "Go to airport",
-    "content": "I should go and drive to airport asap"
-  },
-  {
-    "id": 2,
-    "title": "Shopping with missus",
-    "content": "Yeah you are in hell"
-  },
-  { "id": 3, "title": "testudafga", "content": "asfasaf" },
-  { "id": 4, "title": "asdfasfas", "content": "asfasfas" },
-  { "id": 5, "title": "asdasds", "content": "asdasd" },
-  { "id": 6, "title": "asfgasg", "content": "sdgsdg" },
-  { "id": 7, "title": "asfgasg", "content": "sdgsdg" },
-  { "id": 8, "title": "asfgasg", "content": "sdgsdg" }
-]
+[{"id":1,"title":"Go to airport","content":"I should go and drive to airport asap"},{"id":2,"title":"Shopping with missus","content":"Yeah you are in hell"},{"id":3,"title":"testudafga","content":"asfasaf"},{"id":4,"title":"asdfasfas","content":"asfasfas"},{"id":6,"title":"asfgasg","content":"sdgsdg"},{"id":7,"title":"asfgasg","content":"sdgsdg"},{"id":8,"title":"asfgasg","content":"sdgsdg"},{"id":9,"title":"asdas","content":"asdasd"}]
