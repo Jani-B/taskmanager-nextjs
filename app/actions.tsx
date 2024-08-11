@@ -23,7 +23,6 @@ export async function createToDo(prevState: any, formData: FormData) {
     if (data.length < 10) {
       let getlastelement = data[data.length - 1];
       let newId = getlastelement.id + 1;
-      console.log(newId);
 
       data.push({
         id: newId,
@@ -33,28 +32,27 @@ export async function createToDo(prevState: any, formData: FormData) {
       let myJsonData = JSON.stringify(data);
 
       fs.writeFile("app/datalist/data.json", myJsonData);
-      revalidatePath("/addtodo"); //lets take us back to the same site so that the content will update.s
+      revalidatePath("/"); //lets take us back to the same site so that the content will update.s
     }
   }
 }
 
-type ReadToDo = {
-  id: number;
-  title: string;
-  content: string;
-};
-
-export async function deleteToDo(formData: FormData) {
-  const id = formData.get("id");
+export async function deleteToDo(prevState: any, formData: FormData) {
   const todofile = await fs.readFile(
     process.cwd() + "/app/datalist/data.json",
     "utf8"
   );
   const data = await JSON.parse(todofile);
+  let id: any;
+  try {
+    id = formData.get("deleteid");
+  } catch (e) {
+    console.log(e);
+  }
 
   data.splice(id, 1);
 
   let myJsonData = JSON.stringify(data);
   fs.writeFile("app/datalist/data.json", myJsonData);
-  revalidatePath("/addtodo");
+  revalidatePath("/");
 }

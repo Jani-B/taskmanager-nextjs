@@ -1,3 +1,4 @@
+"use server";
 import { promises as fs } from "fs";
 import { Delete } from "../components/delete";
 
@@ -13,21 +14,19 @@ export default async function ToDoList() {
     datainfo.push(data[i]);
   }
 
-  let tooMany = false;
-
-  if (datainfo.length === 10) {
-    tooMany = true;
+  if (datainfo.length > 0) {
+    return (
+      <div>
+        <ul>
+          {datainfo.map((item) => (
+            <li key={item.id}>
+              {item.title} <Delete id={item.id.toString()} />
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  } else {
+    return <div>No current Tasks</div>;
   }
-
-  return (
-    <div>
-      <ul>
-        {datainfo.map((item) => (
-          <li key={item.id}>
-            {item.title} <Delete id={item.id.toString()} />
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
 }

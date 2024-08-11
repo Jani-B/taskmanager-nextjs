@@ -1,10 +1,13 @@
+"use client";
 import { deleteToDo } from "../actions";
+import { useFormState } from "react-dom";
 
 export const Delete = ({ id }: any): any => {
+  const [state, formAction] = useFormState(deleteToDo, null);
   return (
-    <form action={deleteToDo}>
-      <input type="hidden" name="id" value={id}></input>
-      <button>X</button>
+    <form action={formAction}>
+      <input type="hidden" name="deleteid" value={id}></input>
+      <button type="submit">X</button>
     </form>
   );
 };
