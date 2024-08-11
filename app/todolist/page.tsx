@@ -1,4 +1,5 @@
 import { promises as fs } from "fs";
+import { Delete } from "../components/delete";
 
 export default async function ToDoList() {
   const todofile = await fs.readFile(
@@ -12,14 +13,17 @@ export default async function ToDoList() {
     datainfo.push(data[i]);
   }
 
-  console.log(typeof datainfo[2].id);
+  
 
   return (
     <div>
       <ul>
         {datainfo.map((item) => (
-          <li key={item.id}>{item.title}</li>
+          <li key={item.id}>
+            {item.title} <Delete id={item.id.toString()} />
+          </li>
         ))}
+
         <li>test</li>
       </ul>
     </div>
