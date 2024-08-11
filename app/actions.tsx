@@ -50,9 +50,10 @@ export async function deleteToDo(prevState: any, formData: FormData) {
     console.log(e);
   }
 
-  data.splice(id, 1);
+  const filtered = data.filter((num: any) => num.id != id);
+  //data.splice(id, 1);
 
-  let myJsonData = JSON.stringify(data);
+  let myJsonData = JSON.stringify(filtered);
   fs.writeFile("app/datalist/data.json", myJsonData);
   revalidatePath("/");
 }
