@@ -23,11 +23,8 @@ export default async function ToDoList() {
               {item.title} <Delete id={item.id.toString()} />
             </li>
           ))}
-          <li>li element</li>
         </ul>
-        <div>
-          <p>here is some text</p>
-        </div>
+        <div></div>
       </div>
     );
   } else {

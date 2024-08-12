@@ -1,17 +1,30 @@
 "use client";
 import { useFormState } from "react-dom";
 import { createToDo } from "@/app/actions";
+import styles from "./addForm.module.css";
 
 export default function AddForm() {
   const [state, formAction] = useFormState(createToDo, null);
 
   return (
     <div>
-      <h2>Here we make the input </h2>
-      <form action={formAction}>
-        <input type="text" id="task" name="task"></input>
-        <input type="text" id="specfics" name="specifics"></input>
-        <button>add</button>
+      <form action={formAction} className={styles.addToDoForm}>
+        <p>Add new task</p>
+        <h3>Task</h3>
+        <input
+          className={styles.formInput}
+          type="text"
+          id="task"
+          name="task"
+        ></input>
+        <h3>Description (optional)</h3>
+        <input
+          className={styles.formInput}
+          type="text"
+          id="specfics"
+          name="specifics"
+        ></input>
+        <button className={styles.formButton}>add</button>
       </form>
     </div>
   );

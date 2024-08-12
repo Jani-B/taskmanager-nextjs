@@ -1,6 +1,7 @@
 ## Current status
 
 - Mainly working. For some reason I cannot remove the last element!
+- Last element is not removable!
 
 ## next steps:
 

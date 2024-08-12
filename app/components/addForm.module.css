@@ -1,0 +1,39 @@
+.addToDoForm {
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: lightblue;
+  padding: 0.5rem 0rem;
+  margin: 1rem 0rem;
+  max-width: 400px;
+}
+
+.addToDoForm p {
+  width: 100%;
+  margin: 0px;
+  border-bottom: 1px solid black;
+  background-color: rgb(137, 186, 202);
+  padding-bottom: 0.3rem;
+}
+
+.addToDoForm h3 {
+  margin-top: 0.5rem;
+  margin-bottom: 0rem;
+  font-size: 1rem;
+}
+
+.formButton {
+  background-color: rgb(87, 176, 206);
+  border: none;
+  display: block;
+  margin: 0.5rem auto;
+  padding: 0.5rem 2rem;
+  border-radius: 10px;
+}
+
+.formInput {
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
