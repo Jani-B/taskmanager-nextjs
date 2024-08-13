@@ -7,11 +7,11 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div>
-        <h1>To-Do</h1>
+        <h1>Tasklist</h1>
         <Addtodo />
       </div>
       <div>
-        <h2>Your todos</h2>
+        <h2 className={styles.taskList}>Your Tasks</h2>
         <ToDoList />
       </div>
     </main>

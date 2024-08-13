@@ -1,6 +1,7 @@
 "use server";
 import { promises as fs } from "fs";
 import { Delete } from "../components/delete";
+import styles from "./page.module.css";
 
 export default async function ToDoList() {
   const todofile = await fs.readFile(
@@ -17,10 +18,16 @@ export default async function ToDoList() {
   if (datainfo.length > 0) {
     return (
       <div>
-        <ul>
+        <ul className={styles.listContainer}>
           {datainfo.map((item) => (
-            <li key={item.id}>
-              {item.title} <Delete id={item.id.toString()} />
+            <li className={styles.listItem} key={item.id}>
+              <div>
+                <p className={styles.listTask}>{item.title} </p>
+                <p className={styles.listTask}>{item.content} </p>
+              </div>
+              <div className={styles.deleteButtonContainer}>
+                <Delete id={item.id.toString()} />
+              </div>
             </li>
           ))}
         </ul>
