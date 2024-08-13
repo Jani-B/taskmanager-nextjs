@@ -1,9 +1,9 @@
 ## Current status
 
-- Mainly working. For some reason I cannot remove the last element!
-- Last element is not removable!
+- Can add task to the list.
+- Maximum of 10 tasks (as this is a demo)
+- If too many tasks - will remove the form.
 
 ## next steps:
 
-- Try to find a way to remove correctly the task.
-- Also when you add a task it will for some reason make error inside console for the delete button form
+- Change task form colors. Currently not so nice.
