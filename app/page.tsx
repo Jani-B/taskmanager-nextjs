@@ -10,7 +10,7 @@ export default function Home() {
         <h1>Tasklist</h1>
         <Addtodo />
       </div>
-      <div>
+      <div className={styles.toDoContainer}>
         <h2 className={styles.taskList}>Your Tasks</h2>
         <ToDoList />
       </div>

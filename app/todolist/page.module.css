@@ -1,7 +1,8 @@
 .listContainer {
-  padding-top: 1rem;
+  padding: 1px;
   width: 100%;
-  padding-left: 0;
+  margin-top: 2rem;
+  padding-bottom: 3rem;
 }
 
 .listItem {
@@ -9,12 +10,18 @@
   padding: 0.5rem;
   margin: 0.5rem 0.5rem;
   border: 1px solid black;
-  
+
   display: flex;
 }
 
 .listTask {
   margin-right: 0.5rem;
+  margin-top: 0.2rem;
+}
+
+.titleTask {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
 .deleteButtonContainer {

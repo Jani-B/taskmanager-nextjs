@@ -1,6 +1,7 @@
 "use server";
 import { promises as fs } from "fs";
 import AddForm from "../components/addForm";
+import styles from "./page.module.css"
 
 export default async function Addtodo() {
   const todofile = await fs.readFile(
@@ -17,7 +18,7 @@ export default async function Addtodo() {
     );
   } else {
     return (
-      <div>
+      <div className={styles.formBackground}>
         <AddForm />
       </div>
     );

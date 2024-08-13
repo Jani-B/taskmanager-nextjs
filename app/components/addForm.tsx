@@ -19,6 +19,7 @@ export default function AddForm() {
           type="text"
           id="task"
           name="task"
+          maxLength={25}
         ></input>
         <h3>Description (optional)</h3>
         <input
@@ -26,8 +27,9 @@ export default function AddForm() {
           type="text"
           id="specfics"
           name="specifics"
+          maxLength={75}
         ></input>
-        <button className={styles.formButton}>add</button>
+        <button className={styles.formButton}>Add Task</button>
       </form>
     </div>
   );

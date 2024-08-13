@@ -22,7 +22,9 @@ export default async function ToDoList() {
           {datainfo.map((item) => (
             <li className={styles.listItem} key={item.id}>
               <div>
-                <p className={styles.listTask}>{item.title} </p>
+                <p className={`${styles.listTask} ${styles.titleTask}`}>
+                  {item.title}{" "}
+                </p>
                 <p className={styles.listTask}>{item.content} </p>
               </div>
               <div className={styles.deleteButtonContainer}>
