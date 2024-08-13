@@ -17,7 +17,9 @@ export async function createToDo(prevState: any, formData: FormData) {
     specifics = formData.get("specifics") as string;
     //console.log(task);
     //console.log(specifics);
-  } catch (e) {}
+  } catch (error: any) {
+    console.error(`Got an error trying to read the file: ${error.message}`);
+  }
 
   if (task) {
     if (data.length < 10) {
